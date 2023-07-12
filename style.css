@@ -1,6 +1,6 @@
 .container {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 h1 {
@@ -16,7 +16,7 @@ button {
     padding: 7px 20px;
     font-size: 18px;
     border-radius: 5px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 
@@ -32,6 +32,7 @@ button {
     height: 400px;
     background-color: #232832;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 body{
@@ -41,17 +42,18 @@ body{
 
 
 .slider {
-    height: 250px;
+    height: 270px;
     margin: auto;
-    position: relative; width: 70%;
+    position: relative; width: 68%;
     display: grid;
     place-items: center; 
     overflow: hidden;
+    
 }
 
 .slide-track {
     display: flex;
-    width: calc(250px * 10); 
+    width: calc(240px * 10); 
 }
 
 
@@ -60,7 +62,7 @@ body{
 }
 
 .slide-animation2 {
-    animation: scroll 0.5s linear infinite;
+    animation: scroll 0.4s linear infinite;
 }
 
 .slide-animation3 {
@@ -69,7 +71,7 @@ body{
 
 
 .slide {
-    height: 200px;
+    height: 250px;
     width: 250px;
     display: flex;
     align-items: center;
@@ -85,6 +87,7 @@ img {
 
 img:hover {
     transform: translateZ(20px);
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -95,7 +98,7 @@ img:hover {
     content: '';
     height: 100%;
     position: absolute;
-    width: 15%;
+    width: 10%;
     z-index: 2;
 }
 .slider::before {
@@ -121,8 +124,29 @@ img:hover {
 .arrow {
     position: fixed;
     left: 50%;
-    width: 2px;
-    background-color: yellow;
+    width: 1px;
+    background-color: rgb(228, 251, 128);
     transform: translateX(-50%);
-    height: 20px;
+    height: 240px;
+}
+
+.blur {
+    opacity: 0.05;
+    filter: blur(70px);
+}
+
+.blur2 {
+    filter: blur(30px);
+}
+
+.icon {
+    width: 9vh;
+    height: 9vh;
+    margin-right: 10px;
+}
+
+.open {
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
 }

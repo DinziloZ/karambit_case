@@ -19,30 +19,40 @@ function spinImage() {
     randomImg();
     random_check = true;
   }
-  ``
+  var container = document.querySelector('.container');
   var slide = document.querySelector('.slide-track');
   slide.classList.add('slide-animation');
 
   setTimeout(function() {
     slide.classList.remove('slide-animation');
-    slide.classList.add('slide-animation2')
+    slide.classList.add('slide-animation2');
   }, 1000);
   
   // Xóa lớp spin-animation sau 3 giây
   setTimeout(function() {
     slide.classList.remove('slide-animation2');
-    slide.classList.add('slide-animation3')
+    slide.classList.add('slide-animation3');
   }, 4000);
 
   setTimeout(function() {
+    container.classList.add('blur2');
+  }, 5500);
+
+  setTimeout(function() {
     slide.classList.remove('slide-animation3');
-    slide.classList.add('slide-animation')
+    slide.classList.add('slide-animation');
+    container.classList.add('blur');
   }, 6000);
 
   setTimeout(function() {
-    slide.classList.remove('slide-animation')
-    
+    slide.classList.remove('slide-animation');
+    container.classList.remove('blur');
   }, 7000);
+
+  setTimeout(function() {
+    container.classList.remove('blur2');
+  }, 7100);
+  
   random_check = false; 
   
 }

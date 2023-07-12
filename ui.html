@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NoPixel Karambit Case</title>
+  <title>Karambit Case</title>
   <link rel="icon" type="image/png" href="img/npx.jpg" sizes="32x32" />
   <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-  <div class="arrow"></div>
+
+  <div class="open">
+    <img class="icon" src="img/npx.jpg" alt="">
+    <h1> Karambit Case - NoPixel Inspired</h1>
+  </div>
+
   <div class="container">
     
     <div class="minigame">
       
       <div class="slider">
-`
-          <div class="slide-track">
 
+          <div class="slide-track">
+            
           <!-- IMAGE -->
             <div class="slide"> 
               <img id="item1" src="img/karambit1.png">
@@ -58,12 +63,11 @@
               <img id="item9" src="img/karambit5.png">
             </div>
 
-
+            
           </div>
-
+          <div class="arrow"></div>
         </div>
         
-      
       <button onclick="spinImage()">SPIN</button>
       <audio id="myAudio">
         <source src="case.mp3" type="audio/mpeg">
@@ -72,7 +76,7 @@
   
 
   </div>
-
+  
   <script src="script.js"> </script>
 </body>
 </html>
