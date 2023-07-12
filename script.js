@@ -41,9 +41,9 @@ function spinImage() {
 
   setTimeout(function() {
     slide.classList.remove('slide-animation')
-    random_check = false;
+    
   }, 7000);
-
+  random_check = false; 
   
 }
 
