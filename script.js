@@ -11,27 +11,19 @@ var imageArray = [
   "img/karambit1.png"
 ];
 
-
+let random_check = false;
 
 function spinImage() {
- 
-  for(let i = 1; i < 11; i++) {
-    var audio = document.getElementById("myAudio");
-    audio.play();
-
-    var randomIndex = Math.floor(Math.random() * imageArray.length);
-    var randomImage = imageArray[randomIndex];
-    
-    var img_export = "item" + i.toString();
-    var imageElement = document.getElementById(img_export);
-    imageElement.src = randomImage;
-
+  
+  if (!random_check) {
+    randomImg();
+    random_check = true;
   }
-
+  ``
   var slide = document.querySelector('.slide-track');
   slide.classList.add('slide-animation');
 
-  setTimeout(function() { 
+  setTimeout(function() {
     slide.classList.remove('slide-animation');
     slide.classList.add('slide-animation2')
   }, 1000);
@@ -49,11 +41,26 @@ function spinImage() {
 
   setTimeout(function() {
     slide.classList.remove('slide-animation')
+    random_check = false;
   }, 7000);
 
   
 }
 
+function randomImg() {
+  for(let i = 1; i < 11; i++) {
+    var audio = document.getElementById("myAudio");
+    audio.play();
+
+    var randomIndex = Math.floor(Math.random() * imageArray.length);
+    var randomImage = imageArray[randomIndex];
+    
+    var img_export = "item" + i.toString();
+    var imageElement = document.getElementById(img_export);
+    imageElement.src = randomImage;
+
+  }
+}
 
 
 
