@@ -54,7 +54,15 @@ body{
 
 
 .slide-animation {
+    animation: scroll 3s linear infinite;
+}
+
+.slide-animation2 {
     animation: scroll 0.5s linear infinite;
+}
+
+.slide-animation3 {
+    animation: scroll 1s linear infinite;
 }
 
 

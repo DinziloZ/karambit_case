@@ -16,6 +16,9 @@ var imageArray = [
 function spinImage() {
  
   for(let i = 1; i < 11; i++) {
+    var audio = document.getElementById("myAudio");
+    audio.play();
+
     var randomIndex = Math.floor(Math.random() * imageArray.length);
     var randomImage = imageArray[randomIndex];
     
@@ -29,14 +32,24 @@ function spinImage() {
   slide.classList.add('slide-animation');
 
   setTimeout(function() { 
-    slide.classList.replace('scroll 2s linear infinite;');
-  }, 5000);
+    slide.classList.remove('slide-animation');
+    slide.classList.add('slide-animation2')
+  }, 1000);
   
   // Xóa lớp spin-animation sau 3 giây
   setTimeout(function() {
-    slide.classList.remove('slide-animation');
-    
-  }, 8000);
+    slide.classList.remove('slide-animation2');
+    slide.classList.add('slide-animation3')
+  }, 4000);
+
+  setTimeout(function() {
+    slide.classList.remove('slide-animation3');
+    slide.classList.add('slide-animation')
+  }, 6000);
+
+  setTimeout(function() {
+    slide.classList.remove('slide-animation')
+  }, 7000);
 
   
 }
